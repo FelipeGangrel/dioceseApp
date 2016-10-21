@@ -1,0 +1,52 @@
+.tab-button{
+  .tab-button-icon{
+    min-width: auto !important;
+    width: 3rem !important;
+    height: auto !important;
+  }
+}
+
+.ion-ios-custom-missas,
+.ion-md-custom-missas {
+  content: url(../assets/img/icons/missa.png);
+}
+
+.ion-ios-custom-noticias,
+.ion-md-custom-noticias {
+  content: url(../assets/img/icons/noticias.png);
+}
+
+.ion-ios-custom-agenda,
+.ion-md-custom-agenda {
+  content: url(../assets/img/icons/agenda.png);
+}
+
+.ion-ios-custom-radio,
+.ion-md-custom-radio {
+  content: url(../assets/img/icons/radio.png);
+}
+
+.tab-button[aria-selected="true"]{
+  color: #414141 !important;
+
+  .ion-ios-custom-missas,
+  .ion-md-custom-missas {
+    content: url(../assets/img/icons/missa-selected.png);
+  }
+
+  .ion-ios-custom-noticias,
+  .ion-md-custom-noticias {
+    content: url(../assets/img/icons/noticias-selected.png);
+  }
+
+  .ion-ios-custom-agenda,
+  .ion-md-custom-agenda {
+    content: url(../assets/img/icons/agenda-selected.png);
+  }
+
+  .ion-ios-custom-radio,
+  .ion-md-custom-radio {
+    content: url(../assets/img/icons/radio-selected.png);
+  }
+
+}

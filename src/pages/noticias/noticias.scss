@@ -1,0 +1,78 @@
+page-noticias{
+    background-color: #fafafa;
+    ion-content{
+        section.card-noticia{
+            .card-header{
+                position: relative;
+                padding: 7px 0;
+                .avatar, .categoria{
+                    display: inline-block;
+                }
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 5px;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    &.d{ background-color: #d32f2f}
+                    &.i{ background-color: #fbc02d}
+                    &.p{ background-color: #33a26f}
+                }
+                .categoria{
+                    font-weight: bold;
+                }
+                .data{
+                    position: absolute;
+                    top: 7px; right: 0;
+                    height: 30px; line-height: 30px;
+                    color: #333;
+                }
+            }
+            .card-body{
+                .social-bar{
+                    position: relative;
+                    padding: 5px 0;
+                    border-bottom: 1px solid #c7c7c7;
+                    .heart, .comment{
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 12px;
+                    }
+                    .heart{
+                        background-color: #f50057;
+                        background-image: url('../assets/img/icons/heart.png');
+                        margin-right: 3px;
+                    }
+                    .comment{
+                        background-color: #ccc;
+                        background-image: url('../assets/img/icons/comment.png');
+                    }
+                    .likes{
+                        position: absolute;
+                        top:5px; right: 0;
+                        height: 24px;
+                        line-height: 24px;
+                        padding-left: 20px;
+                        background-image: url('../assets/img/icons/heart-black.png');
+                        background-position: left center;
+                        background-repeat: no-repeat;
+                        background-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+    
+}

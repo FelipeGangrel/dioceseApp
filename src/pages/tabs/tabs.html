@@ -1,0 +1,10 @@
+<section class="meu-player" *ngIf="playerVisible">
+  player de musica
+</section>
+
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Noticias" tabIcon="custom-noticias"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Missas" tabIcon="custom-missas"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Agenda" tabIcon="custom-agenda"></ion-tab>
+  <ion-tab (ionSelect)="showHidePlayer()" tabTitle="Radio" tabIcon="custom-radio"></ion-tab>
+</ion-tabs>
