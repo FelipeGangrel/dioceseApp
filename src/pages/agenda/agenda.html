@@ -3,13 +3,39 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Agenda</ion-title>
+    <ion-title>Próximos eventos</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Missas aqui</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, doloremque!
-  </p>
+<ion-content>
+  <div *ngFor="let periodo of agenda" [ngClass]="{'mes':true,'atual':isPeriodoAtual(periodo.mes,periodo.ano)}">
+    <header>
+      <button class="btn-voltar" *ngIf="verificaPeriodo(periodo.mes, periodo.ano, 'voltar')" (click)="voltarPeriodo()"></button>
+      {{periodo.mesTexto}}
+      <button class="btn-avancar" *ngIf="verificaPeriodo(periodo.mes, periodo.ano, 'avancar')" (click)="avancarPeriodo()"></button>
+    </header>
+
+    
+
+    <div class="eventos">
+      <div class="evento" *ngFor="let evento of periodo.eventos; let i = index" (click)="verEvento(i)">
+        <header>
+          <div class="data">
+            <h1>{{evento.dia}}</h1>
+            <h4>{{periodo.mesAbrev}}</h4>
+          </div>
+          <div class="info">
+            <span class="tipo">{{evento.tipo}}</span>
+            <span class="titulo">{{evento.titulo}}</span>
+            <span class="hora">A partir das {{evento.hora}}</span>
+          </div>
+        </header>
+        <article *ngIf="eventoAtivo == i">
+          {{evento.detalhes}}
+        </article>
+
+      </div>
+    </div>
+
+  </div>
 </ion-content>
